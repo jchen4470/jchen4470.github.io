@@ -145,9 +145,22 @@
             <a href="dashboard.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </div>
-  
+        <div class="work hidden-work">
+            <img src="images/student-performance.png">   
+            <div class="layer">
+              <h3>Student Performance Factors</h3>
+              <p>In this collaborative research, R was utilized to build predictive models.
+                 Analyzed factors that may affect student performance and predicted student performance based on various factors.
+                 ANOVA and hypothesis testing was utilized.
+                </p>
+              <a href="student.html" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
       </div>
-      <a href = "#" class = "btn">See more</a>
+    
+      <a href="#" class="btn" id="toggle-btn">See more</a>
     </div>
   </div>
 
@@ -227,5 +240,21 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
+<!--Adding functionality to the see more button.-->
+<script>
+    document.getElementById("toggle-btn").addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent page from jumping
+      const hiddenWorks = document.querySelectorAll(".hidden-work");
+      const isHidden = hiddenWorks[0].style.display === "none" || hiddenWorks[0].style.display === "";
+  
+      hiddenWorks.forEach(work => {
+        work.style.display = isHidden ? "block" : "none";
+      });
+  
+      this.textContent = isHidden ? "See less" : "See more";
+    });
+</script>
+  
 </body>
 </html>

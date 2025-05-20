@@ -204,7 +204,7 @@ nav ul li a:hover::after{
     background-color: #ff004f;
     transform: translate(-10px);
 }
-
+/*----------------Work------------------*/
 
 .work-list {
     display: grid;
@@ -289,6 +289,10 @@ nav ul li a:hover::after{
     background: #ff004f;
     color: white;
   }
+  .hidden-work {
+    display: none;
+  }
+
 
   /*-----------Contact------------*/
 .contact-left{

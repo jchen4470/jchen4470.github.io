@@ -1,0 +1,29 @@
+import tweepy
+import pandas as pd
+
+# Replace this with your actual Bearer Token
+bearer_token = "YOUR_TWITTER_BEARER_TOKEN"
+
+# Initialize client
+client = tweepy.Client(bearer_token=bearer_token)
+
+# Define your query
+query = "TSLA lang:en -is:retweet"  # Tesla tweets, English, not retweets
+
+# Pull tweets (up to 100 per request)
+tweets = client.search_recent_tweets(query=query, tweet_fields=['created_at', 'text'], max_results=10)
+
+# Convert to DataFrame
+tweet_data = [{'timestamp': tweet.created_at, 'text': tweet.text} for tweet in tweets.data]
+df_tweets = pd.DataFrame(tweet_data)
+
+# Save or inspect
+print(df_tweets.head())
+df_tweets.to_csv("tsla_tweets.csv", index=False)
+
+# Instructions 
+
+# Make an free account here https://developer.x.com/en
+
+# Once on Dashboard, go to Portal -> Project -> Settings -> Keys and Tokens
+# Here you will find Bearer Token -> copy that into line 5 and you should be able to pull tweets. I have it set to TSLA and 10 tweets

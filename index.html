@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Personal Portfolio Website</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src="https://kit.fontawesome.com/f7f0f2c39f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id = 'header'>
+    <div class = "container">
+        <nav>
+            <img src = "images/letter-J-transparent-smoothed.png" class = "logo">
+            <ul id = "sidemenu">
+                <li><a href = "#header"> Home</a></li>
+                <li><a href = "#about"> About</a></li>
+                <li><a href = "#services"> Services</a></li>
+                <li><a href = "#portfolio"> Portfolio</a></li>
+                <li><a href = "#contact"> Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
+        </nav>
+        <div class = "header-text">
+            <p>Data Analytics</p>
+            <H1>Welcome to <br> <span>My Portfolio!</span></H1>
+        </div>
+    </div>
+<!----------About----------------->
+</div>
+<div id = "about">
+    <div class = "container">
+        <div class = "row">
+            <div class="about-col-1">
+            <img src = "images/me.JPG">
+        </div>
+            <div class="about-col-2">
+                <h1 class = "subtitle">About Me</h1>
+                <p>Hi! I'm Jason. I'm currently a Masters of Science in Data Analytics Engineering student at George Mason University 
+                    with a Bachelors of Arts, Statistics degree from the University at Buffalo. I utilize Python, Excel, SQL, and Tableau to 
+                    analyze data and create visualizations that are insightful and easy to understand! 
+                </p>
+
+                <div class = "tab-titles">
+                    <p class = "tab-links active-link" onclick = "opentab('skills')"> Skills</p>
+                    <p class = "tab-links" onclick = "opentab('Projects/Research')"> Projects/Research</p>
+                    <p class = "tab-links" onclick = "opentab('Education')"> Education</p>
+                </div>
+                <div class="tab-contents active-tab" id = "skills">
+                    <ul>
+                        <li><Span>Statistics</Span><br> Predicitve analytics</li>
+                        <li><Span>Data Analysis Tools</Span><br> R, Python, Excel, SQL, Tableau</li>
+                        <li><Span>Problem Solving</Span><br>Able to convert raw data to insights!</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "Projects/Research">
+                    <ul>
+                        <li><Span>Washington D.C. Crime Research - R, Python, AWS Athena (SQL)</Span><br>Analyzed crime reports in the Washington D.C. area in 2024. 
+                            Created many visualizations such as mapping crime, bar plots, scatterplots, etc. 
+                            Derived insights from raw reports data into actionable data-driven decisions that can be made. </li>
+                        <li><Span>Correlating Social Media Metadata with Stock Volatility: Market Sentiment Analysis - Python, NLP</Span><br>This project utilized public data sourced 
+                            from r/Wallstreetbets in the year 2024. Performed sentiment analysis and financial analysis from public Reddit sentiment compared to Yahoo Finance data 
+                            to see if there were any trends that correlate public sentiment and stock volatility. </li>
+                        <li><Span>Super Store Dashboard - Tableau</Span><br>Utilized past sales data from 2017-2020 to create an interactive dashboard that actively conveys information
+                             about the customer base and total sales/profits of subcategories and sales trends. The dashboard encompasses the entire data and visualizes sales information to 
+                             easily digestible interactive visualizations for anyone to understand.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "Education">
+                    <ul>
+                        <li><Span>2020 - 2023</Span><br><strong>B.A. in Statistics</strong> @ University at Buffalo, Buffalo, NY</li>
+                        <li><Span>2025 - 2026</Span><br><strong>M.S. in Data Analytics Engineering</strong> @ George Mason University, Fairfax, VA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------Services--------------------------------------------->
+<div id="services">
+    <div class="container"></div>
+    <h1 class = "subtitle">Skills Overview</h1>
+    <div class = "services-list">
+        <div>
+            <i class="fa-solid fa-database"></i>
+            <h2>Data Analytics</h2>
+            <p>I have done lots of work on Data Analytics from personal projects to research papers.
+                I derive insights from raw data and convert it to usable information that is easy to understand and informational. 
+                I have experience in various data analytics tools such as <span style="color: #3498db; font-weight: bold;">Python</span>, &nbsp; to gain insights from data.
+            </p>
+            
+        </div>
+        <div>
+            <i class="fa-solid fa-snowplow"></i>
+            <h2>Data Cleaning</h2>
+            <p>Most of my tasks require some degree of data cleaning. I have experience cleaning dirty data into usable <span style="color: #2ecc71; font-weight: bold;">CLEAN</span> data. Data obtained often
+                are dirty and require cleaning to be usable. I have experience in cleaning data using <span style="color: #3498db; font-weight: bold;">Python</span>, &nbsp;
+                <span style="color: #3498db; font-weight: bold;">R</span>, &nbsp;and depending on data size, &nbsp;<span style="color: #3498db; font-weight: bold;">Excel</span>. 
+            </p>
+            
+        </div>
+        <div>
+            <i class="fa-solid fa-table-columns"></i>
+            <h2>Dashboarding</h2>
+            <p>Some of my projects require the need to create interactive dashboarding. Most of my dashboards utilize the software Tableau in order to create informative and user interactive 
+                dashboards to visualize and derive insights. 
+            </p>
+            
+        </div>
+    </div>
+</div>
+
+<!--------------------Portfolio---------------->
+<div id="portfolio">
+    <div class="container">
+      <h1 class="subtitle"> My Featured Work</h1>
+      <div class="work-list">
+        
+        <div class="work">
+          <img src="images/washington.webp">
+          <div class="layer">
+            <h3>Washington D.C. Crime Research 2024</h3>
+            <p>This research provides insight on the occurrence of crimes in Washington D.C. in 2024.</p>
+            <a href="research1.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        
+        <div class="work">
+          <img src="images/stock.png">
+          <div class="layer">
+            <h3>Correlating Reddit Data to Stock Market Volatility using Sentiment Analysis Research</h3>
+            <p>This collaborative research project was conducted to uncover if public sentiment in social media has an effect on stock market volatility and trends.</p>
+            <a href="stock-research.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        
+        <div class="work">
+          <img src="images/dashboard.jpg">
+          <div class="layer">
+            <h3>Superstore Dashboarding</h3>
+            <p>Utilized Tableau software to create insightful dashboards from 2017–2020. Visualizes sales data in a way that is easy to understand and digest.</p>
+            <a href="dashboard.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+  
+      </div>
+      <a href = "#" class = "btn">See more</a>
+    </div>
+  </div>
+
+  <!----------------Contact--------------------------------------->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class = "subtitle">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>jchen4470@gmail.com</p>
+                <div class = "social-icons">
+                    <a href = "https://www.linkedin.com/in/jason-chen-34267822a/" target="_blank" rel="noopener noreferrer"><i class = "fab fa-linkedin"></i></a>
+                    <a href = "https://www.instagram.com/jaseusd/" target="_blank" rel="noopener noreferrer"><i class = "fab fa-instagram"></i></a>
+                    <a href = "https://github.com/ice50L" target="_blank" rel="noopener noreferrer"><i class = "fab fa-github"></i></a>
+                </div>
+                <a href = "Jason_Chen_resume.pdf" download class = "btn btn2"> Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name = "submit-to-google-sheet">
+                    <input type = "text" name = "Name" placeholder = "Your Name" required>
+                    <input type = "email" name = "Email" placeholder = "Your Email" required>
+                    <textarea name = "Message" rows = "6" placeholder = "Your Message"></textarea>
+                    <button type = "submit" class = "btn btn2">Submit</button>
+                </form>
+                <span id = "msg"></span>
+            </div> 
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Jason Chen</p>
+    </div>
+  </div>
+  
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzd7pdMIs1Xq8ymono4Gd_0SaJvmFo5qKKJeyehBFaNPpXFnPiwVpieLp6GPhadJElEHA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {msg.innerHTML = "Your message has been sent! Thank you."
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
